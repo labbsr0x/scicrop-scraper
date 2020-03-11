@@ -1,0 +1,60 @@
+version: '3.7'
+
+services:
+
+  scicrop-scraper:
+    build: .
+    image: scicrop-scraper
+    environment:
+      - SCISCRAPER_CONDUCTOR_PROTOCOL=http
+      - SCISCRAPER_CONDUCTOR_HOST=conductor-server
+      - SCISCRAPER_CONDUCTOR_PORT=8080
+      - SCISCRAPER_API_URI=https://engine.scicrop.com/scicrop-engine-web/api/v1
+      - SCISCRAPER_AGRO_URI=http://localhost:8000
+      - SCISCRAPER_HTTP_TIMEOUT=10
+      - SCISCRAPER_THREADS_PER_TASK=1
+      - SCISCRAPER_POOLING_INTERVAL=10
+
+  conductor-server:
+    build: ./conductor
+    image: conductor-server
+    environment:
+      - DYNOMITE_HOSTS=dynomite:8102:us-east-1c
+      - ELASTICSEARCH_URL=elasticsearch:9300
+      - LOADSAMPLE=false
+      - PROVISIONING_UPDATE_EXISTING_TASKS=false
+    ports:
+      - 8080:8080
+    restart: always
+
+  conductor-ui:
+    image: flaviostutz/conductor-ui
+    environment:
+      - WF_SERVER=http://conductor-server:8080/api/
+    ports:
+      - 5000:5000
+
+  dynomite:
+    image: flaviostutz/dynomite:0.7.5
+    ports:
+      - 8102:8102
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:5.6.8
+    environment:
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - transport.host=0.0.0.0
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    ports:
+      - 9200:9200
+      - 9300:9300
+
+  local:
+    image: busybox
+    depends_on:
+      - conductor-server
+      - conductor-ui
+      - elasticsearch
+      - dynomite
+

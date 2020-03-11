@@ -1,0 +1,21 @@
+{
+    "name": "scicrop_date",
+    "description": "Scraps data from scicrop agroDataAPI extracting day reads",
+    "version": 1,
+    "tasks": [
+        {
+            "name": "scicrop_date",
+            "taskReferenceName": "scrap",
+            "type": "SIMPLE",
+            "inputParameters": {
+                "username": "${workflow.input.username}",
+                "password": "${workflow.input.password}",
+                "date": "${workflow.input.date}"
+            }
+        }
+    ],
+    "failureWorkflow": "cleanup_encode_resources",
+    "restartable": true,
+    "workflowStatusListenerEnabled": true,
+    "schemaVersion": 2
+}

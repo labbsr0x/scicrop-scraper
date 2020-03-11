@@ -1,0 +1,20 @@
+{
+    "name": "scicrop_last_read",
+    "description": "Scraps data from scicrop agroDataAPI extracting last station reads",
+    "version": 1,
+    "tasks": [
+        {
+            "name": "scicrop_last_read",
+            "taskReferenceName": "scrap",
+            "type": "SIMPLE",
+            "inputParameters": {
+                "username": "${workflow.input.username}",
+                "password": "${workflow.input.password}"
+            }
+        }
+    ],
+    "failureWorkflow": "cleanup_encode_resources",
+    "restartable": true,
+    "workflowStatusListenerEnabled": true,
+    "schemaVersion": 2
+}
