@@ -10,14 +10,14 @@ How to run scraper locally:
 
 ## Service Configuration
 
-* SCISCRAPER_CONDUCTOR_PROTOCOL - Configure the protocol to access conductor web server
-* SCISCRAPER_CONDUCTOR_HOST - Configure the host to access conductor web server
-* SCISCRAPER_CONDUCTOR_PORT - Configure the port to access conductor web server
-* SCISCRAPER_API_URI - Sets the URI to connect on Scicrop AgroDataAPI
-* SCISCRAPER_AGRO_URI - Sets the URI to connect on AgroDataAPI.
-* SCISCRAPER_HTTP_TIMEOUT - Sets the http timeout IN SECONDS for Scicrop rest integration
-* SCISCRAPER_THREADS_PER_TASK - Sets the number of threads per task provided on task-list parameter
-* SCISCRAPER_POOLING_INTERVAL - Sets the interval IN SECONDS between attempts to pool tasks from conductor
+* `SCISCRAPER_CONDUCTOR_PROTOCOL` - Configure the protocol to access conductor web server
+* `SCISCRAPER_CONDUCTOR_HOST` - Configure the host to access conductor web server
+* `SCISCRAPER_CONDUCTOR_PORT` - Configure the port to access conductor web server
+* `SCISCRAPER_API_URI` - Sets the URI to connect on Scicrop AgroDataAPI
+* `SCISCRAPER_AGRO_URI` - Sets the URI to connect on AgroDataAPI.
+* `SCISCRAPER_HTTP_TIMEOUT` - Sets the http timeout IN SECONDS for Scicrop rest integration
+* `SCISCRAPER_THREADS_PER_TASK` - Sets the number of threads per task provided on task-list parameter
+* `SCISCRAPER_POOLING_INTERVAL` - Sets the interval IN SECONDS between attempts to pool tasks from conductor
 
 ## Usage
 
@@ -32,9 +32,9 @@ curl --request POST \
     "name": "scicrop_date",
     "version": 1,
     "input": {
-			"username": "user1",
-			"password": "pass1",
-			"date": "2019-07-01"
+	"username": "user1",
+	"password": "pass1",
+	"date": "2019-07-01"
     }
 }'
 ```
