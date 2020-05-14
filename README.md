@@ -15,6 +15,7 @@ How to run scraper locally:
 * `SCISCRAPER_CONDUCTOR_PORT` - Configure the port to access conductor web server
 * `SCISCRAPER_API_URI` - Sets the URI to connect on Scicrop AgroDataAPI
 * `SCISCRAPER_AGRO_URI` - Sets the URI to connect on AgroDataAPI.
+* `SCISCRAPER_SCHEMA_URI` - Sets the URI to connect on SCHEMA API.
 * `SCISCRAPER_HTTP_TIMEOUT` - Sets the http timeout IN SECONDS for Scicrop rest integration
 * `SCISCRAPER_THREADS_PER_TASK` - Sets the number of threads per task provided on task-list parameter
 * `SCISCRAPER_POOLING_INTERVAL` - Sets the interval IN SECONDS between attempts to pool tasks from conductor
