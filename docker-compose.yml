@@ -11,6 +11,7 @@ services:
       - SCISCRAPER_CONDUCTOR_PORT=8080
       - SCISCRAPER_API_URI=https://engine.scicrop.com/scicrop-engine-web/api/v1
       - SCISCRAPER_AGRO_URI=http://localhost:8000
+      - SCISCRAPER_SCHEMA_URI=http://localhost:8001/v1
       - SCISCRAPER_HTTP_TIMEOUT=10
       - SCISCRAPER_THREADS_PER_TASK=1
       - SCISCRAPER_POOLING_INTERVAL=10

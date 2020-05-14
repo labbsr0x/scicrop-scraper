@@ -65,6 +65,9 @@ github.com/mitchellh/go-homedir v1.1.0/go.mod h1:SfyaCUpYCn1Vlf4IUYiD9fPX4A5wJrk
 github.com/mitchellh/mapstructure v1.1.2 h1:fmNYVwqnSfB9mZU6OS2O6GsXM+wcskZDuKQzvN1EDeE=
 github.com/mitchellh/mapstructure v1.1.2/go.mod h1:FVVH3fgwuzCH5S8UJGiWEs2h04kUh9fWfEaFds41c1Y=
 github.com/mwitkow/go-conntrack v0.0.0-20161129095857-cc309e4a2223/go.mod h1:qRWi+5nqEBWmkhHvq77mSJWrCKwh8bxhgT7d/eI7P4U=
+github.com/netflix/conductor v2.26.1+incompatible h1:jfqpfIQ1PZjjI1cKbGaeKqv8EbVN5w8Xpv13XLdpUYU=
+github.com/netflix/conductor/client/go v0.0.0-20200429221930-232eddd07a4f h1:QAmCIDpKLe5SDXcnyMXOsncHaABgGnUCS5+yB9tBiLA=
+github.com/netflix/conductor/client/go v0.0.0-20200429221930-232eddd07a4f/go.mod h1:LV0X0fPU1FeRMvky8Qww+Rifb6ENlKwRSUvv3qcJ07Q=
 github.com/oklog/ulid v1.3.1/go.mod h1:CirwcVhetQ6Lv90oh/F+FBtV6XMibvdAFo93nm5qn4U=
 github.com/paulmach/orb v0.1.3 h1:Wa1nzU269Zv7V9paVEY1COWW8FCqv4PC/KJRbJSimpM=
 github.com/paulmach/orb v0.1.3/go.mod h1:VFlX/8C+IQ1p6FTRRKzKoOPJnvEtA5G0Veuqwbu//Vk=
